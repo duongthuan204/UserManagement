@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Warning</title>
+<link href="../webjars/bootstrap/3.3.7/css/bootstrap.css"
+	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.css}"
+	rel="stylesheet" />
+</head>
+<body>
+	<div style="margin: 10% 30% 0 30%">
+		<div class="panel panel-danger" style="text-align: center">
+			<div class="panel-heading">
+				<label></label>
+				<div class="form-group">
+					<span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;
+					Sorry, you are not allowed to access to this page!
+				</div>
+			</div>
+			<div class="panel-body">
+				<button class="btn btn-danger" onclick="window.location.href='/'">
+					Back to login</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
