@@ -18,15 +18,20 @@ public class UserController {
 		model.addAttribute("user", new UserDetail());
 		return "login";
 	}
+	
+	@GetMapping("/error")
+	public String error(){
+		return "error";
+	}
 
-	@PostMapping(value = "/welcome")
+	@PostMapping("/welcome")
 	public String login(UserDetail user, Model model, RedirectAttributes redirect) {
 		String username = user.getUsername().trim();
 		String password = user.getPassword().trim();
-		UserDetail find = userService.find(username);
-		if (find != null) {
-			if (find.getPassword().equals(password)) {
-				model.addAttribute("user", find);
+		UserDetail data = userService.find(username);
+		if (data != null) {
+			if (userService.passwordEncoder.matches(password, data.getPassword())) {
+				model.addAttribute("user", data);
 				return "welcome";
 			}
 		}

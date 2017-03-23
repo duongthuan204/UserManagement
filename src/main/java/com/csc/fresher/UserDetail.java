@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.validator.constraints.Length;
-
 @Entity
 @Table(name = "users")
 public class UserDetail implements Serializable {

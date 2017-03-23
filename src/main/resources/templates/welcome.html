@@ -8,25 +8,24 @@
 	rel="stylesheet" />
 </head>
 <body>
-	<div style="margin: 5% 30% 0 30%">
+	<div style="margin: 10% 25% 0 25%">
 		<div class="panel panel-default" style="text-align: center">
 			<div class="panel-heading">
 				<div class="form-group">
-					<h4>
-						Hello <b><span th:text="${user.getFullname()}"></span></b>
-					</h4>
+					<h1>
+						Hello, <span th:text="${user.getFullname()}"></span>
+					</h1>
 				</div>
 				<div class="form-group">
-					<h4>
+					<h3>
 						Your mobile number is <b><span th:text="${user.getMobile()}"></span></b>
-					</h4>
+					</h3>
 				</div>
 			</div>
 			<div class="panel-body">
 				<div class="form-group">
 					<button class="btn btn-danger" onclick="window.location.href='/'">
-						<span class="glyphicon glyphicon-log-out"></span>&nbsp;Log
-						out
+						<span class="glyphicon glyphicon-log-out"></span>&nbsp;Log out
 					</button>
 				</div>
 			</div>

@@ -36,20 +36,13 @@ label {
 				<label></label>
 				<form action="#" th:action="@{/success}" th:object="${user}"
 					onsubmit="return validate()" method="POST">
-
-					<div th:if="${message}" class="alert alert-danger" align="center"
-						id="user_taken">
-						<span th:text="${message}"></span>
-					</div>
-
-					<div class="alert alert-danger" align="center" id="pass_match"
-						style="display: none">
-						<span>Password does not match the confirm password</span>
-					</div>
-
 					<div class="form-group">
 						<label>Username</label> <input type="text" class="form-control"
 							th:field="*{username}" required="true" oninput="hide()" />
+					</div>
+					<div th:if="${message}" class="alert alert-danger" align="center"
+						id="user_taken">
+						<span th:text="${message}"></span>
 					</div>
 					<div class="form-group">
 						<label>Password</label> <input type="password" id="pass1"
@@ -58,6 +51,10 @@ label {
 					<div class="form-group">
 						<label>Confirm password</label> <input type="password" id="pass2"
 							required="true" class="form-control" />
+					</div>
+					<div class="alert alert-danger" align="center" id="pass_match"
+						style="display: none">
+						<span>Confirm password does not match the password</span>
 					</div>
 					<div class="form-group">
 						<label>Full name</label> <input type="text" class="form-control"
