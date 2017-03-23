@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Welcome</title>
+<link href="../webjars/bootstrap/3.3.7/css/bootstrap.css"
+	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.css}"
+	rel="stylesheet" />
+</head>
+<body>
+	<div style="margin: 5% 30% 0 30%">
+		<div class="panel panel-default" style="text-align: center">
+			<div class="panel-heading">
+				<div class="form-group">
+					<h4>
+						Hello <b><span th:text="${user.getFullname()}"></span></b>
+					</h4>
+				</div>
+				<div class="form-group">
+					<h4>
+						Your mobile number is <b><span th:text="${user.getMobile()}"></span></b>
+					</h4>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<button class="btn btn-danger" onclick="window.location.href='/'">
+						<span class="glyphicon glyphicon-log-out"></span>&nbsp;Log
+						out
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
